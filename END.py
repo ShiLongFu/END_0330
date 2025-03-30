@@ -23,7 +23,7 @@ Severe_tSAH_options = {
 feature_names = ["Hemoglobin", "Fibrinogen", "SDH", "Severe tSAH"]
 
 # Streamlit的用户界面
-st.title("Early Neurological Deterioration (END) Predictor")
+st.title("Early Neurological Deterioration (END) Risk Predictor")
 
 # Hemoglobin: 数值输入
 Hemoglobin = st.number_input("Hemoglobin (g/L):", min_value=0, max_value=200, value=120)
@@ -48,7 +48,7 @@ if st.button("Predict"):
 
     # 显示预测结果
     st.write(f"**Predicted Class:** {predicted_class}")
-    st.write(f"**Prediction Probabilities:** {predicted_proba}")
+    st.write(f"**predicted Probabilities:** {predicted_proba}")
 
     # 根据预测结果生成建议
     probability = predicted_proba[predicted_class] * 100
